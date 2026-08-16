@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Privacy Blur",
+  "version": "1.0.0",
+  "description": "Blur ChatGPT conversations and the prompt composer until you hover over them.",
+  "icons": {
+    "16": "64874.png",
+    "32": "64874.png",
+    "48": "64874.png",
+    "128": "64874.png"
+  },
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*"
+  ],
+  "action": {
+    "default_title": "Toggle ChatGPT Privacy Blur",
+    "default_icon": {
+      "16": "64874.png",
+      "32": "64874.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*"
+      ],
+      "css": ["blur.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
