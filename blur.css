@@ -9,7 +9,7 @@ html.chatgpt-privacy-blur-enabled #prompt-textarea,
 html.chatgpt-privacy-blur-enabled form textarea,
 html.chatgpt-privacy-blur-enabled form [contenteditable="true"] {
   filter: blur(7px) !important;
-  transition: filter 140ms ease !important;
+  transition: filter 60ms ease !important;
 }
 
 html.chatgpt-privacy-blur-enabled [data-message-author-role="assistant"]:hover,
@@ -36,7 +36,7 @@ html.chatgpt-privacy-blur-enabled form [contenteditable="true"]:hover {
   pointer-events: none;
   opacity: 0;
   transform: translate(-50%, -8px);
-  transition: opacity 180ms ease, transform 180ms ease;
+  transition: opacity 140ms ease, transform 140ms ease;
 }
 
 #chatgpt-privacy-blur-notice.is-visible {
